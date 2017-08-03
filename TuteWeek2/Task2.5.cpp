@@ -55,9 +55,11 @@ void solveProblem(double width, double distance, double cWater, double cLand){
 			cost = (hypotenuse*cWater) + (i*cLand);
 
 			if(cost < leastCost){
+
 						leastCost = cost;
 						leastWidth = hypotenuse;
-						leastDistance = i/1000;
+						leastDistance = i;
+
 					}
 		}
 
@@ -65,9 +67,9 @@ void solveProblem(double width, double distance, double cWater, double cLand){
 
 	}
 
-	cout << "The length that should run under water: " << leastWidth << endl;
-	cout << "The length that should run overland: " << leastDistance << endl;
-	cout << "The total cost of constructing the power line: $" << leastCost << endl;
+	cout << "The length that should run under water: " << leastWidth << " meters" << endl;
+	cout << "The length that should run overland: " << leastDistance << " meters" << endl;
+	cout << "The total cost of constructing the power line: $" << leastCost << " meters" << endl;
 
 }
 
